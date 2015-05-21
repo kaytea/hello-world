@@ -1,0 +1,104 @@
+{
+	"activity": "WBOpen",
+	"type": "@baseclass",
+	"where": "Pega-Desktop",
+	"when": "07-10-17",
+	"referencing rules": 
+		[
+			{"activity": "OpenByHandleDD", 						"type": "@baseclass"},
+			{"activity": "OpenByKeys", 							"type": "@baseclass"},
+			{"activity": "VizualizeBackup", 					"type": "@baseclass"},
+			{"activity": "VizualizeDeveloper", 					"type": "@baseclass"},
+			{"activity": "WBOpenLaunch", 						"type": "@baseclass"},
+			{"activity": "doUIAction", 							"type": "@baseclass"},
+			{"activity": "GetSurvey", 							"type": "Pega-Landing-PegaSurvey-SurveyBuilder-"},
+			{"activity": "DisplayOldVersion", 					"type": "Rule-"},
+			{"activity": "pzPrepareCreateWhenRuleSetExists",	"type": "Rule-RuleSet-Version"}
+		],
+	"referenced rules": 
+		[
+			{"category": "Method",
+			 "rules":
+			 	[
+			 		{"ref": "Obj-Open-By-Handle",	"type": "NA"},
+			 		{"ref": "Page-New",				"type": "NA"},
+			 		{"ref": "Page-Remove",			"type": "NA"},
+			 		{"ref": "Property-Set",			"type": "NA"},
+			 		{"ref": "Show-Applet",			"type": "NA"},
+			 		{"ref": "Show-HTML",			"type": "NA"},
+			 		{"ref": "Show-Property",		"type": "NA"}
+				]
+			},
+			{"category": "Data Page",
+			 "rules":
+			 	[
+			 		{"ref": "D_DelegationConfig",	"type": "NA"}
+				]
+			},
+			{"category": "When",
+			 "rules":
+			 	[
+			 		{"ref": "Obj-Open-By-Handle",	"type": "@baseclass"},
+			 		{"ref": "Page-New",				"type": "@baseclass"},
+			 		{"ref": "Page-Remove",			"type": "@baseclass"}
+				]
+			},
+			{"category": "HTML",
+			 "rules":
+			 	[
+			 		{"ref": "HandleRedirectStream",	"type": "@baseclass"}
+				]
+			},
+			{"category": "Class",
+			 "rules":
+			 	[
+			 		{"ref": "@baseclass",					"type": "NA"},
+			 		{"ref": "Embed-Ststem-User-MyRules",	"type": "NA"},
+			 		{"ref": "Rule-Message",					"type": "NA"},
+			 		{"ref": "Rule-Obj-Class",				"type": "NA"}
+				]
+			},
+			{"category": "Library",
+			 "rules":
+			 	[
+			 		{"ref": "@baseclass",				
+			 		 "hasTypes": ["Activity", "String", "String", "Page"]},
+			 		{"ref": "Embed-Ststem-User-MyRules",
+			 		 "hasTypes": ["Activity", "String", "String"]},
+			 		{"ref": "Rule-Message",				
+			 		 "hasTypes": ["String"]},
+			 		{"ref": "Rule-Obj-Class",			
+			 		 "hasTypes": ["String"]}
+				]
+			},
+			{"category": "Property",
+			 "rules":
+			 	[
+			 		{"ref": "pxObjClass",					"type": "@baseclass"},
+			 		{"ref": "pyClassName",					"type": "@baseclass"},
+			 		{"ref": "pyDelegateDescription",		"type": "@baseclass"},
+			 		{"ref": "pyDelegateShortDescription",	"type": "@baseclass"},
+			 		{"ref": "pzDelegationExperience",		"type": "@baseclass"},
+			 		{"ref": "pzInsKey",						"type": "@baseclass"},
+			 		{"ref": "pzShowDelegation",				"type": "@baseclass"},
+			 		{"ref": "pyDelegateDescription",		"type": "Embed-Ststem-User-MyRules"},
+			 		{"ref": "pyDelegateShortDescription",	"type": "Embed-Ststem-User-MyRules"}
+				]
+			},
+			{"category": "Activity",
+			 "rules":
+			 	[
+			 		{"ref": "onBeforeDisplay",				"type": "@baseclass"},
+			 		{"ref": "Open",							"type": "@baseclass"},
+			 		{"ref": "OpenUIDefaults",				"type": "@baseclass"},
+			 		{"ref": "ProcessRedirect",				"type": "@baseclass"},
+			 		{"ref": "pyOpenUIDefaults",				"type": "@baseclass"},
+			 		{"ref": "pzGetDelegationDetails",		"type": "@baseclass"},
+			 		{"ref": "pzOpenErrorResponse",			"type": "@baseclass"},
+			 		{"ref": "pzOpenHarness",				"type": "@baseclass"},
+			 		{"ref": "pzOpenParamSetup",				"type": "@baseclass"},
+			 		{"ref": "DisplayOldVersion",			"type": "Rule-"}
+				]
+			}
+		]
+}
